@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 
 class Support extends Component {
 
-    submitSupport = () => {
-        this.props.history.push('/4')
-    }
+  submitSupport = (event) => {
+    event.preventDefault();
+    this.props.history.push('/4')
+  }
   render() {
     return (
       <div>
 
-          <p>SUPPORT</p>
-          <button onClick={this.submitSupport}>Next</button>
+        <h1>SUPPORT</h1>
+        <h2>How well do you feel you're being supported today?</h2>
+        <form onSubmit={this.submitSupport}>
+          <input type='number' placeholder='Support' />
+
+          <button type="submit">Next</button>
+        </form>
 
 
 

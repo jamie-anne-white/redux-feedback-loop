@@ -6,6 +6,9 @@ import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
+//need to import review in as well
+import Review from '../Review/Review.jsx';
+
 
 class App extends Component {
   render() {
@@ -22,6 +25,9 @@ class App extends Component {
       <Route path= "/2" component = {Understanding} />
       <Route path= "/3" component = {Support} />
       <Route path= "/4" component = {Comments} />
+      {/* adding in a review route page */}
+      <Route path="/5" component={Review} />
+
       </div>
     </Router>
     );
