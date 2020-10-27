@@ -7,18 +7,16 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 
 ### SETUP
 
-Create your database and tables using the provided `data.sql` file. Start the server.
+[x] Create your database and tables using the provided `data.sql` file. Start the server.
+[x] npm install
+[x] npm install redux react-redux
 
-```
-npm install
-npm run server
-```
+[x] npm run server
+
 
 Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
 
-```
-npm run client
-```
+[x] npm run client
 
 ### ADD NEW FEEDBACK
 
