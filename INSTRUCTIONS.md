@@ -10,6 +10,7 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 [x] Create your database and tables using the provided `data.sql` file. Start the server.
 [x] npm install
 [x] npm install redux react-redux
+[x] npm install 'redux-logger' 
 
 [x] npm run server
 
