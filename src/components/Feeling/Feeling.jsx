@@ -22,7 +22,7 @@ class Feeling extends Component {
         <h1>FEELING</h1>
         <h2>How are you feeling about today?</h2>
         <form onSubmit={this.submitFeelings}>
-          <input type='number' placeholder='Feeling'
+        <input required type='number' placeholder='Feeling' 
             onChange={(event) => this.setState({ feelings: event.target.value })} />
           <button type="submit">Next</button>
         </form>

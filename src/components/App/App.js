@@ -8,6 +8,9 @@ import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 //need to import review in as well
 import Review from '../Review/Review.jsx';
+//adding in a success page
+import Success from '../Success/Success.jsx';
+
 
 
 class App extends Component {
@@ -27,6 +30,9 @@ class App extends Component {
       <Route path= "/4" component = {Comments} />
       {/* adding in a review route page */}
       <Route path="/5" component={Review} />
+      <Route path="/success" component={Success} />
+
+      
 
       </div>
     </Router>
