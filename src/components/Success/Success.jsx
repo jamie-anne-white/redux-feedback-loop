@@ -8,6 +8,7 @@ class Success extends Component {
     return (
       <div>
         <h3>Thanks! Your feedback has been submitted.</h3>
+        <button>Submit New Feedback</button>
       </div>
     );
   }

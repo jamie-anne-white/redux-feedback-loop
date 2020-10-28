@@ -7,13 +7,12 @@ class Review extends Component {
     submitFeedback = () => {
         console.log('submit');
         axios.post('/feedback', this.props.reduxState.feedbackReducer)
-        .then( response => {
-            alert('Thanks! Your feedback has been recorded')
-            //go to home? 
-            this.props.history.push('/');
-        }).catch(error => {
-          console.log('error in POST', error);
-        })
+            .then(response => {
+                //go to success page
+                this.props.history.push('/success');
+            }).catch(error => {
+                console.log('error in POST', error);
+            })
     }
 
     render() {
