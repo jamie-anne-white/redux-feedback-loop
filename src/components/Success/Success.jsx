@@ -3,12 +3,16 @@ import { connect } from 'react-redux';
 
 class Success extends Component {
 
+    submitFeelings = () => {
+        this.props.history.push('/')
+    }
+
 
   render() {
     return (
       <div>
         <h3>Thanks! Your feedback has been submitted.</h3>
-        <button>Submit New Feedback</button>
+        <button onClick={this.submitFeelings}>Submit New Feedback</button>
       </div>
     );
   }
