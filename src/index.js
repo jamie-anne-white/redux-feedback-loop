@@ -35,13 +35,19 @@ const feedbackReducer = (state={}, action) => {
        }
    }
    if (action.type === 'ADD_COMMENTS') {
-       return {
-           ...state,
-           comments: action.payload,
-       }
-   }
-       return state
-   }
+    return {
+        ...state,
+        comments: action.payload,
+    }
+}
+if (action.type === 'ADD_EDITED_FEEDBACK') {
+    return action.payload
+}
+if (action.type === 'CLEAR_FEEDBACK') {
+    return {}
+}
+    return state
+}
    
    const reduxStore = createStore(
        combineReducers({
