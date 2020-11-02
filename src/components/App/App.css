@@ -25,3 +25,25 @@
 body {
   background-color: #dbe7f5
 }
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.nav li {
+  float: left;
+}
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* Change the link color to #111 (black) on hover */
+.nav li a:hover {
+  background-color: #033076;
+}

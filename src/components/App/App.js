@@ -12,6 +12,9 @@ import Review from '../Review/Review.jsx';
 import Success from '../Success/Success.jsx';
 //adding in edit page 
 import Edit from '../Edit/Edit.jsx';
+//adding in MaterialUI App Bar
+import AppBar from '@material-ui/core/AppBar';
+
 
 
 
@@ -21,14 +24,13 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
-
-        </header>
-        <br/>
-
-        <p><Link to="/">Home</Link></p>
+        
+      <AppBar className="App-header" position="static">
+            <h1 className="App-title">Feedback</h1>
+            <ul className='nav'>
+            <li><Link to="/">Home</Link></li>
+            </ul>
+          </AppBar>
 
       <Route exact path= "/" component= {Feeling} />
       <Route path= "/2" component = {Understanding} />

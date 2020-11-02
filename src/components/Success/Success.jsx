@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button'
+
 import './Success.css'
 
 
@@ -15,8 +17,8 @@ class Success extends Component {
     return (
       <div className="container">
         <Paper id='paper'>
-        <h3>Thanks! Your feedback has been submitted.</h3>
-        <button onClick={this.submitFeelings}>Submit New Feedback</button>
+        <h3>Awesome, thank you for your feedback!</h3>
+        <Button variant="contained" type='submit' onClick={this.submitFeelings}>Submit New Feedback</Button>
       </Paper>
       </div>
     );
