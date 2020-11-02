@@ -14,6 +14,9 @@ import Success from '../Success/Success.jsx';
 import Edit from '../Edit/Edit.jsx';
 //adding in MaterialUI App Bar
 import AppBar from '@material-ui/core/AppBar';
+//adding in Admin 
+import Admin from '../Admin/Admin.jsx'
+
 
 
 
@@ -29,6 +32,8 @@ class App extends Component {
             <h1 className="App-title">Feedback</h1>
             <ul className='nav'>
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/admin">Admin</Link></li>
+
             </ul>
           </AppBar>
 
@@ -41,6 +46,9 @@ class App extends Component {
       <Route path="/success" component={Success} />
       {/* adding in a edit route page */}
       <Route path="/edit" component={Edit} />
+      {/* adding in an admin route page */}
+      <Route path="/admin" component={Admin} />
+
 
 
       

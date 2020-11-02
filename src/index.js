@@ -48,10 +48,18 @@ if (action.type === 'CLEAR_FEEDBACK') {
 }
     return state
 }
+
+const feedbackDisplayReducer = (state = [], action) => {
+    if (action.type === 'SET_FEEDBACK') {
+        return action.payload
+    }
+    return state;
+}
    
    const reduxStore = createStore(
        combineReducers({
-          feedbackReducer
+          feedbackReducer,
+          feedbackDisplayReducer
        }),
        applyMiddleware(logger)
    );
