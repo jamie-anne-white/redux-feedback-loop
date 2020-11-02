@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button'
+import { TextField } from '@material-ui/core';
+
 
 
 class Comments extends Component {
@@ -22,9 +25,9 @@ class Comments extends Component {
         <h1>COMMENTS</h1>
         <h2>Any comments or thoughts you would like to share?</h2>
         <form onSubmit={this.submitComments}>
-          <input type='text' placeholder='Comments'
+          <TextField multiline variant="outlined" type='text' placeholder='Comments'
             onChange={(event) => this.setState({ comments: event.target.value })} />
-          <button type="submit">Next</button>
+          <Button variant="contained" type="submit">Next</Button>
         </form>
 
       </div>
@@ -34,7 +37,7 @@ class Comments extends Component {
 
 const mapStateToProps = (reduxState) => {
   return {
-      reduxState
+    reduxState
   }
 }
 

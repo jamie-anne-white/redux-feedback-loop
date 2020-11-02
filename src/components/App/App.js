@@ -24,10 +24,11 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
-          <li><Link to="/">Home</Link></li>
 
         </header>
         <br/>
+
+        <p><Link to="/">Home</Link></p>
 
       <Route exact path= "/" component= {Feeling} />
       <Route path= "/2" component = {Understanding} />

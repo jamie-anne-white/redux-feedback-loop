@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 class Edit extends Component {
 
@@ -22,7 +24,8 @@ class Edit extends Component {
             alert('please complete all fields')
         }
         else {
-        //send updated feedback to redux    
+        //send updated feedback to redux
+    
         axios.post('/feedback', this.props.reduxState.feedbackReducer)
             .then(response => {
                 //go to success page
@@ -53,19 +56,19 @@ class Edit extends Component {
             <div>
                 <h2>Edit Your Feedback</h2>
 
-                    {/* Needs labels for material UI  later*/}
-                    <input required type='number' defaultValue={this.props.reduxState.feedbackReducer.feeling}
+                    {/* Material UI labels added in */}
+                    <TextField label="feeling" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.feeling} min="1" max="10"
                         onChange={(event) => this.setState({ feeling: event.target.value })} />
-                    <input required type='number' defaultValue={this.props.reduxState.feedbackReducer.understanding}
+                    <TextField label="understanding" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.understanding} min="1" max="10"
                         onChange={(event) => this.setState({ understanding: event.target.value })} />
-                    <input required type='number' defaultValue={this.props.reduxState.feedbackReducer.support}
+                    <TextField label="support" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.support} min="1" max="10"
                         onChange={(event) => this.setState({ support: event.target.value })} />
-                    <input type='text' defaultValue={this.props.reduxState.feedbackReducer.comments}
+                    <TextField multiline label="comments" variant="outlined" type='text' defaultValue={this.props.reduxState.feedbackReducer.comments}
                         onChange={(event) => this.setState({ comments: event.target.value })} />
 
                     {/* need to make this conditionally render */}
-                    {this.state.viewSubmit ? <button onClick={this.submitFeedback}>Submit</button> :
-                    <button onClick={(event) => this.closeEditor(event)}>Done</button>}
+                    {this.state.viewSubmit ? <Button variant="contained" color="primary" onClick={this.submitFeedback}>Submit</Button> :
+                    <Button variant="contained" onClick={(event) => this.closeEditor(event)}>Done</Button>}
 
             </div>
         );
