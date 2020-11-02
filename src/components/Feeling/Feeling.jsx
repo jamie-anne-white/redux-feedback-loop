@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+import './Feeling.css'
 
 
 class Feeling extends Component {
@@ -19,17 +21,18 @@ class Feeling extends Component {
 
   render() {
     return (
-      <div>
-
-        <h1>FEELING</h1>
-        <h2>How are you feeling about today?</h2>
-        <form onSubmit={this.submitFeelings}>
-        <TextField variant="outlined" required type='number' placeholder='Feeling' min="1" max="10"
-            onChange={(event) => this.setState({ feelings: event.target.value })} />
+      <div className="container">
+      <Paper id='paper'>
+          <h1>Feeling</h1>
+          <h2>How are you feeling today?</h2>
+          <form onSubmit={this.submitFeelings}>
+          <TextField variant="outlined" required type='number' placeholder='Feeling' min="1" max="10"
+          onChange={(event) => this.setState({feelings: event.target.value})}/>
+          <div className='submitBtn' >
           <Button variant="contained" type="submit">Next</Button>
-        </form>
-
-
+          </div>
+          </form>
+      </Paper>
       </div>
     );
   }
